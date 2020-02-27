@@ -39,11 +39,29 @@ class PostController extends Controller
     {
     	$request->validate([
             'title'=>'required',
+            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
             'body'=>'required',
         ]);
-    
-        Post::create($request->all());
-    
+
+        if($request->hasFile('file'))
+        {
+            $image_name = $request->file('file')->getClientOriginalName();
+            $filename = pathinfo($image_name,PATHINFO_FILENAME);
+            $image_ext = $request->file('file')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'-'.time().'.'.$image_ext;
+            $path = $request->file('file')->storeAs('public/News',$fileNameToStore);
+           
+           
+        }
+        else{
+            $fileNameToStore = 'noimage.jpg';
+        }
+
+        $data = new Post();
+        $data->fill($request->all());
+        $data->file = $path;
+        $data->save();
+
         return redirect()->route('post.index');
     }
     
