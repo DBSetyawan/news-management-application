@@ -17,7 +17,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-// Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/posts', 'PostController@index')->name('posts');
+Route::middleware(['Privilages'])->group(function() {
+            Route::get('/posts', 'PostController@index')->name('posts');
+    }
+);
+
 Route::resource('post', 'PostController');
+Route::get('/hapus/{id}', 'PostController@hapus')->name('destr');
 Route::resource('comments', 'CommentsController');

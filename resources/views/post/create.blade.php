@@ -10,7 +10,6 @@
                     <form method="post" action="{{ route('post.store') }}" enctype="multipart/form-data">
                         <label class="">Pilih Gambar Berita:</label>
                         <br/>
-
                         <label class="btn btn-primary" for="my-file-selector">
                             <input id="my-file-selector" type="file" name="file" 
                             onchange="$('#upload-file-info').html(this.files[0].name)" class="d-none">
@@ -26,9 +25,12 @@
                             <label class="label">Isi berita: </label>
                             <textarea name="body" rows="10" cols="30" class="form-control" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <input type="submit" class="btn btn-success" />
-                        </div>
+                        @if (session()->get('privilages') == "admin")
+                            <div class="form-group">
+                                <input type="submit" class="btn btn-success" />
+                            </div>
+                            @else
+                        @endif
                     </form>
                 </div>
             </div>

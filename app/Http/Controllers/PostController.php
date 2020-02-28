@@ -59,7 +59,7 @@ class PostController extends Controller
 
         $data = new Post();
         $data->fill($request->all());
-        $data->file = $path;
+        $data->file = $fileNameToStore;
         $data->save();
 
         return redirect()->route('post.index');
@@ -74,5 +74,12 @@ class PostController extends Controller
     {
     	$post = Post::find($id);
         return view('post.show', compact('post'));
+    }
+    
+    public function hapus($id){
+        $deletedRows = Post::findOrFail($id)->delete();
+
+        return back()->with(['success' => 'Data berhasil dihapus']);
+
     }
 }

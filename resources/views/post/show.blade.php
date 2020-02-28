@@ -6,9 +6,15 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
-                    <h3 class="text-center text-success">News management application</h3>
-                    <br/>
-                    <h2>{{ $post->title }}</h2>
+                    <h2 style="text-align: center">{{ $post->title }}&nbsp;</h2>
+                    <img 
+                        src="{{ asset('News/'.$post->file) }}" 
+                        alt="Logo" 
+                        style="
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;width: 86%;">
+                <br/>
                     <p>
                         {{ $post->body }}
                     </p>
@@ -19,7 +25,7 @@
    
                     <hr />
                     <h4>Add comment</h4>
-                    <form method="post" action="{{ route('comments.store'   ) }}">
+                    <form method="post" action="{{ route('comments.store') }}">
                         @csrf
                         <div class="form-group">
                             <textarea class="form-control" name="body"></textarea>
