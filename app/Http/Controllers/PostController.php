@@ -2,8 +2,11 @@
    
 namespace App\Http\Controllers;
    
-use Illuminate\Http\Request;
 use App\Post;
+use App\Comment;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
    
 class PostController extends Controller
 {
@@ -51,10 +54,10 @@ class PostController extends Controller
             $fileNameToStore = $filename.'-'.time().'.'.$image_ext;
             $path = $request->file('file')->storeAs('public/News',$fileNameToStore);
            
-           
         }
-        else{
-            $fileNameToStore = 'noimage.jpg';
+            else 
+                    {
+                         $fileNameToStore = 'noimage.jpg';
         }
 
         $data = new Post();
@@ -78,8 +81,14 @@ class PostController extends Controller
     
     public function hapus($id){
         $deletedRows = Post::findOrFail($id)->delete();
-
         return back()->with(['success' => 'Data berhasil dihapus']);
+    }
+
+    public function UpdateDataNews($id){
+        $post = Post::find($id);
+        $commentx = Comment::whereIn('post_id', [$id])->get();
+        $d = Carbon::Now();
+        return view('post.detail_news', compact('post','commentx','d'));
 
     }
 }

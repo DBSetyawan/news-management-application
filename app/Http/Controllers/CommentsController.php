@@ -26,4 +26,22 @@ class CommentsController extends Controller
    
         return back();
     }
+
+    public function updateDataNews(Request $request, $id)
+    {
+    	// $request->validate([
+        //     'body'=>'required',
+        // ]);
+   
+        $input = $request->all();
+        
+        // dd($input);die;
+        // $input['user_id'] = auth()->user()->id;
+        Comment::where('id', $input['parent_id'])
+                // ->whereIn('post_id', [$input['parent_id']])
+                // ->whereIn('parent_id', [$input['parent_id']])
+                ->update(['body' => implode('', $input['body'])]);
+   
+        return back();
+    }
 }

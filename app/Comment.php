@@ -8,8 +8,11 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Comment extends Model
 {
     use SoftDeletes;
+
+    protected $guarded = ['*'];
    
-    protected $dates = ['deleted_at'];
+    // protected $dates = ['deleted_at'];
+    public $timestamps = false;
    
     /**
      * The attributes that are mass assignable.
