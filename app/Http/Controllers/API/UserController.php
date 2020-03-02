@@ -3,13 +3,16 @@
 namespace App\Http\Controllers\API;
 
 use Auth;
-use Carbon\Carbon;
+use App\Post;
 use App\User;
+use Carbon\Carbon;
 use GuzzleHttp\Client;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Facades\Validator;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
+use App\Http\Resources\PostedComments;
+use Illuminate\Support\Facades\Validator;
 
 class UserController extends Controller
 {
@@ -31,10 +34,17 @@ class UserController extends Controller
         }
     
         $request['password']=Hash::make($request['password']);
-        $user = User::create($request->toArray());
+        // $user = User::create($request->toArray());
     
+        $user = new User;
+        $user->name = $request['name'];
+        $user->email = $request['email'];
+        $user->password = $request['password'];
+        $user->api_token =  Str::random(100);
         $token = $user->createToken('Laravel Password Grant Client')->accessToken;
         $response = ['token' => $token];
+        $user->save();
+
     
         return response($response, 200);
     
@@ -62,6 +72,10 @@ class UserController extends Controller
             $token->expires_at = Carbon::now()->addWeeks(1);
 
             $token->save();
+
+            $postArray = ['api_token' => $createdToken->accessToken];
+
+            User::where('email',request('email'))->update($postArray);
       
             return response()->json([
             'access_token' => $createdToken->accessToken,

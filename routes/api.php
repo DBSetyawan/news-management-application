@@ -14,14 +14,8 @@ use Illuminate\Support\Facades\Redis;
 |
 */
 Route::post('/login', 'API\UserController@login')->name('login.apis');
-Route::post('/register', 'API\UserController@register')->name('register.api');
+Route::post('/register', 'API\UserController@register')->name('register.apis');
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['middleware' => ['auth:api']], function () {
+    Route::get('/get-all-posted', 'API\APIpostsedComments@getALLposted')->name('detail.data.posted');
 });
-
-// Route::group(['middleware' => ['auth.api']], function () {
-
-  
-
-// });
