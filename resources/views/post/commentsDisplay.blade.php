@@ -1,5 +1,5 @@
 @foreach($comments as $x => $comment)
-@if (session()->get('privilages')=="user")
+{{-- @if (session()->get('privilages')=="user") --}}
 <div class="display-comment" @if($comment->parent_id != null) style="margin-left:40px;" @endif>
 <strong>{{ $comment->user->name }}</strong>
         <p>{{ $comment->body }}</p>
@@ -15,7 +15,7 @@
                 <input type="submit" class="btn btn-warning" value="Reply" />
             </div>
         </form>
-        @endif
+        {{-- @endif --}}
         @include('post.commentsDisplay', ['comments' => $comment->replies])
     </div>
 @endforeach

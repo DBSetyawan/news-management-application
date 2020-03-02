@@ -13,7 +13,8 @@
                         style="
                         display: block;
                         margin-left: auto;
-                        margin-right: auto;width: 86%;">
+                        margin-right: auto;width: 86%;"
+                    >
                 <br/>
                     <p>
                         {{ $post->body }}

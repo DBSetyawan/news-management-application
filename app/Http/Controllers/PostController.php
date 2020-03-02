@@ -6,6 +6,7 @@ use App\Post;
 use App\Comment;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Events\EventCreateNewPost;
 use Illuminate\Support\Facades\Auth;
    
 class PostController extends Controller
@@ -64,6 +65,8 @@ class PostController extends Controller
         $data->fill($request->all());
         $data->file = $fileNameToStore;
         $data->save();
+
+        event(new EventCreateNewPost($data));
 
         return redirect()->route('post.index');
     }

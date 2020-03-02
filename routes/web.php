@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Redis;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,6 +23,21 @@ Route::middleware(['Privilages'])->group(function() {
             Route::get('/posts', 'PostController@index')->name('posts');
     }
 );
+
+Route::get('/redis', function () {
+    $redis = Redis::connection();
+    return $redis->get('last_seen_'.time());
+    // $queue = Queue::push('LogMessage',array('message'=>'Time: '.time()));
+    //    return $queue;
+    });
+    
+    // class LogMessage{
+    //     public function fire($job, $date){
+    //     File::append(app_path().'/queue.txt',$date['message'].PHP_EOL);
+    //     $job->delete();
+    //     }
+    // }
+        
 
 Route::resource('post', 'PostController');
 Route::get('/hapus/{id}', 'PostController@hapus')->name('destr');
