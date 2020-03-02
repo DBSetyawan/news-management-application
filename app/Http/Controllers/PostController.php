@@ -6,8 +6,10 @@ use App\Post;
 use App\Comment;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use App\Events\EventDeletedPost;
 use App\Events\EventCreateNewPost;
 use Illuminate\Support\Facades\Auth;
+use App\Listeners\EventListenerDeletedPost;
    
 class PostController extends Controller
 {
@@ -84,6 +86,7 @@ class PostController extends Controller
     
     public function hapus($id){
         $deletedRows = Post::findOrFail($id)->delete();
+        event(new EventDeletedPost($deletedRows, $id));
         return back()->with(['success' => 'Data berhasil dihapus']);
     }
 
