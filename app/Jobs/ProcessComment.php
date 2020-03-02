@@ -36,7 +36,7 @@ class ProcessComment implements ShouldQueue
         $comment = $this->comment;
         $new_log->insert([
             'username' => session()->get('privilages'),
-            'event' => 'Queue Job Successed',
+            'event' => 'Queue Comments',
             'logs_file' => $comment->body
         ]);
     }

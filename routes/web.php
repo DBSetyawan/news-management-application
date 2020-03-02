@@ -24,19 +24,23 @@ Route::middleware(['Privilages'])->group(function() {
     }
 );
 
-Route::get('/redis', function () {
-    $redis = Redis::connection();
-    return $redis->get('last_seen_'.time());
-    // $queue = Queue::push('LogMessage',array('message'=>'Time: '.time()));
-    //    return $queue;
-    });
+Route::get('/reds', function () {
+    $p = Redis::incr('p');
+    return $p;
+});
+// Route::get('/redis', function () {
+//     $redis = Redis::connection();
+//     return $redis->get('last_seen_'.time());
+//     $queue = Queue::push('LogMessage',array('message'=>'Time: '.time()));
+//        return $queue;
+//     });
     
-    // class LogMessage{
-    //     public function fire($job, $date){
-    //     File::append(app_path().'/queue.txt',$date['message'].PHP_EOL);
-    //     $job->delete();
-    //     }
-    // }
+//     class LogMessage{
+//         public function fire($job, $date){
+//         File::append(app_path().'/queue.txt',$date['message'].PHP_EOL);
+//         $job->delete();
+//         }
+//     }
         
 
 Route::resource('post', 'PostController');
