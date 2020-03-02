@@ -35,7 +35,7 @@ class APIpostsedComments extends Controller
         return response()->json([
             'success' => true,
             'message' => 'success get data',
-            'data' => new PostedComments(Post::with('comments')->paginate(5))
+            'data' => new PostedComments(Post::with('comments')->paginate(2))
         ]);
     }
     
