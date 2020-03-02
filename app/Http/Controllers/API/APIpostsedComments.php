@@ -29,5 +29,14 @@ class APIpostsedComments extends Controller
             'data' => new PostedComments(Post::with('comments')->get())
         ]);
     }
+
+    public function getPaginationPost()
+    {
+        return response()->json([
+            'success' => true,
+            'message' => 'success get data',
+            'data' => new PostedComments(Post::with('comments')->paginate(5))
+        ]);
+    }
     
 }

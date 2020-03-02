@@ -18,4 +18,5 @@ Route::post('/register', 'API\UserController@register')->name('register.apis');
 
 Route::group(['middleware' => ['auth:api']], function () {
     Route::get('/get-all-posted', 'API\APIpostsedComments@getALLposted')->name('detail.data.posted');
+    Route::get('/get-all-pagination', 'API\APIpostsedComments@getPaginationPost')->name('pagination.data.posted');
 });
