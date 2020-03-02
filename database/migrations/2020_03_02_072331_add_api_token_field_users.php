@@ -14,7 +14,7 @@ class AddApiTokenFieldUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->longText('api_token')->unique()->after('remember_token');
+            $table->longText('api_token')->nullable()->unique()->after('remember_token');
         });
     }
 
