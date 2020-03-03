@@ -47,4 +47,4 @@ Route::resource('post', 'PostController');
 Route::get('/hapus/{id}', 'PostController@hapus')->name('destr');
 Route::resource('comments', 'CommentsController');
 Route::get('detail-news/{id}', 'PostController@UpdateDataNews')->name('show.detail.news');
-Route::get('update-detail-data/{id}', 'CommentsController@updateDataNews')->name('updates.data.detail.news');
+Route::post('update-detail-data/{id}', 'CommentsController@UpdateChangedPosted')->name('updates.data.detail.newss');

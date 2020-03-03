@@ -70,6 +70,54 @@
                         </div>
                     </form>
                 </div>
+                <div class="card">
+                    <div class="card-header">{{ __('Informasi requirement user testing :') }}</div>
+    
+                    <div class="card-body">
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+                            {{ __('* username wajib disi ( admin ) :') }}
+                            <div class="form-group row">
+                                <label for="" class="col-md-4 col-form-label text-md-right">{{ __('Username :') }}</label>
+    
+                                    <label for="" class="col-md-3 col-form-label text-md-right">{{ __('admin') }} </label>
+    
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-md-4 col-form-label text-md-right">{{ __('User email admin :') }}</label>
+    
+                                    <label for="" class="col-md-3 col-form-label text-md-right">{{ __('whateveryouwant') }}</label>
+    
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-md-4 col-form-label text-md-right">{{ __('Password admin :') }}</label>
+    
+                                    <label for="" class="col-md-3 col-form-label text-md-right">{{ __('whateveryouwant') }}</label>
+    
+                            </div>
+                            <hr>
+                            {{ __('* username wajib disi ( users ) :') }}
+                            <div class="form-group">
+                                <label for="" class="col-md-4 col-form-label text-md-right">{{ __('Username :') }}</label>
+    
+                                    <label for="" class="col-md-3 col-form-label text-md-right">{{ __('users') }} </label>
+    
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-md-4 col-form-label text-md-right">{{ __('User non-admin :') }}</label>
+    
+                                    <label for="" class="col-md-3 col-form-label text-md-right">{{ __('whateveryouwant') }}</label>
+    
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="col-md-4 col-form-label text-md-right">{{ __('Password non-admin :') }}</label>
+    
+                                    <label for="" class="col-md-3 col-form-label text-md-right">{{ __('whateveryouwant') }}</label>
+    
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

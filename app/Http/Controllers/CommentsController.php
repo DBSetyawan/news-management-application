@@ -2,10 +2,13 @@
    
 namespace App\Http\Controllers;
    
+use App\Post;
 use App\Comment;
+use Illuminate\Http\File;
 use App\Jobs\ProcessComment;
 use Illuminate\Http\Request;
 use App\Events\EventUpdatedPost;
+use Illuminate\Support\Facades\Storage;
 use App\Listeners\EventListenerUpdatedpost;
    
 class CommentsController extends Controller
@@ -38,18 +41,41 @@ class CommentsController extends Controller
         return back();
     }
 
-    public function updateDataNews(Request $request, $id)
-    {
-    	$request->validate([
-            'body'=>'required',
-        ]);
-   
-        $input = $request->all();
+    public function UpdateChangedPosted(Request $request, $id){
         
+        $input = $request->all();
+        $post = Post::whereIn('id',[$input['post_id']])->first();
+
+        if($request->hasFile('file'))
+        {
+            $image_name = $request->file('file')->getClientOriginalName();
+            $filename = pathinfo($image_name,PATHINFO_FILENAME);
+            $image_ext = $request->file('file')->getClientOriginalExtension();
+            $fileNameToStore = $filename.'-'.time().'.'.$image_ext;
+            $path = $request->file('file')->storeAs('public/News',$fileNameToStore);
+           
+        }  
+            else {
+
+                $fileNameToStore = $post->file;
+
+        }
+
+        $storagePath  = Storage::disk('public')->getDriver()->getAdapter()->getPathPrefix();
+        $datapath = $storagePath.'News\\'.$post->file;
+
+        if(file_exists($datapath)){
+            Storage::delete($datapath);
+            $post->file = $fileNameToStore;
+            $post->save();
+        }
+
         $data = Comment::where('id', $input['parent_id'])->update(['body' => implode('', $input['body'])]);
    
         event(new EventUpdatedPost($input));
                 
         return back();
+
     }
+
 }
