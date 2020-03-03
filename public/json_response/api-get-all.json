@@ -1,0 +1,615 @@
+{
+    "success": true,
+    "message": "success get data",
+    "data": [
+        {
+            "id": 1,
+            "title": "penguein",
+            "file": "Penguins-1583138841.jpg",
+            "body": "this penguein",
+            "created_at": "2020-03-02 08:47:21",
+            "updated_at": "2020-03-02 08:47:21",
+            "deleted_at": null,
+            "reply_comment": [
+                {
+                    "id": 3,
+                    "user_id": 1,
+                    "post_id": 1,
+                    "parent_id": null,
+                    "body": "asdasdnice post adminthank you netizenyour welcomeTest queuetest comment queuetestsda",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": [
+                        {
+                            "id": 5,
+                            "user_id": 3,
+                            "post_id": 1,
+                            "parent_id": 3,
+                            "body": "nice post admin",
+                            "created_at": null,
+                            "updated_at": null,
+                            "deleted_at": null,
+                            "user": {
+                                "id": 3,
+                                "name": "users",
+                                "email": "users@user.dev",
+                                "email_verified_at": null,
+                                "created_at": "2020-03-03 01:26:34",
+                                "updated_at": "2020-03-03 01:26:34"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "user_id": 3,
+                    "post_id": 1,
+                    "parent_id": 3,
+                    "body": "nice post admin",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": [
+                        {
+                            "id": 6,
+                            "user_id": 1,
+                            "post_id": 1,
+                            "parent_id": 5,
+                            "body": "thank you netizen",
+                            "created_at": null,
+                            "updated_at": null,
+                            "deleted_at": null,
+                            "user": {
+                                "id": 1,
+                                "name": "admin",
+                                "email": "admin@admin.dev",
+                                "email_verified_at": null,
+                                "created_at": "2020-03-02 08:46:33",
+                                "updated_at": "2020-03-03 03:02:20"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "user_id": 1,
+                    "post_id": 1,
+                    "parent_id": 5,
+                    "body": "thank you netizen",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": [
+                        {
+                            "id": 7,
+                            "user_id": 3,
+                            "post_id": 1,
+                            "parent_id": 6,
+                            "body": "your welcome",
+                            "created_at": null,
+                            "updated_at": null,
+                            "deleted_at": null,
+                            "user": {
+                                "id": 3,
+                                "name": "users",
+                                "email": "users@user.dev",
+                                "email_verified_at": null,
+                                "created_at": "2020-03-03 01:26:34",
+                                "updated_at": "2020-03-03 01:26:34"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "user_id": 3,
+                    "post_id": 1,
+                    "parent_id": 6,
+                    "body": "your welcome",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 8,
+                    "user_id": 3,
+                    "post_id": 1,
+                    "parent_id": null,
+                    "body": "Test queue",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 9,
+                    "user_id": 3,
+                    "post_id": 1,
+                    "parent_id": null,
+                    "body": "test comment queue",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 10,
+                    "user_id": 3,
+                    "post_id": 1,
+                    "parent_id": null,
+                    "body": "test",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 11,
+                    "user_id": 3,
+                    "post_id": 1,
+                    "parent_id": null,
+                    "body": "sda",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "hydrangeas",
+            "file": "Hydrangeas-1583138917.jpg",
+            "body": "this hydrangeas",
+            "created_at": "2020-03-02 08:48:37",
+            "updated_at": "2020-03-02 08:48:37",
+            "deleted_at": null,
+            "reply_comment": [
+                {
+                    "id": 1,
+                    "user_id": 1,
+                    "post_id": 2,
+                    "parent_id": null,
+                    "body": "beautiful",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Jellyfish",
+            "file": "Jellyfish-1583138927.jpg",
+            "body": "this Jellyfish",
+            "created_at": "2020-03-02 08:48:47",
+            "updated_at": "2020-03-02 08:48:47",
+            "deleted_at": null,
+            "reply_comment": [
+                {
+                    "id": 2,
+                    "user_id": 1,
+                    "post_id": 3,
+                    "parent_id": null,
+                    "body": "beautiful bro",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 34,
+                    "user_id": 3,
+                    "post_id": 3,
+                    "parent_id": null,
+                    "body": "sdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "this koala",
+            "file": "Koala-1583198571.jpg",
+            "body": "this koala squad",
+            "created_at": "2020-03-03 01:22:51",
+            "updated_at": "2020-03-03 01:22:51",
+            "deleted_at": null,
+            "reply_comment": [
+                {
+                    "id": 4,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "this koala, amazing",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 12,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "waow test",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": [
+                        {
+                            "id": 13,
+                            "user_id": 1,
+                            "post_id": 4,
+                            "parent_id": 12,
+                            "body": "asdasd",
+                            "created_at": null,
+                            "updated_at": null,
+                            "deleted_at": null,
+                            "user": {
+                                "id": 1,
+                                "name": "admin",
+                                "email": "admin@admin.dev",
+                                "email_verified_at": null,
+                                "created_at": "2020-03-02 08:46:33",
+                                "updated_at": "2020-03-03 03:02:20"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 13,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": 12,
+                    "body": "asdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 14,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 15,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asdxzczxcz",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 16,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 17,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "sad",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 18,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "sd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 19,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asda",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 20,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 21,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asdas",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 22,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 23,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "sad",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 24,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "sdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 25,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asda",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 26,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asda",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 27,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "sdasdasdasdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 28,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 29,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 30,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 31,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "sad",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 32,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "asd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 33,
+                    "user_id": 1,
+                    "post_id": 4,
+                    "parent_id": null,
+                    "body": "dasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "asda",
+            "file": "Jellyfish-1583218523.jpg",
+            "body": "asdasd",
+            "created_at": "2020-03-03 05:00:47",
+            "updated_at": "2020-03-03 06:55:23",
+            "deleted_at": null,
+            "reply_comment": [
+                {
+                    "id": 35,
+                    "user_id": 1,
+                    "post_id": 5,
+                    "parent_id": null,
+                    "body": "sadasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": [
+                        {
+                            "id": 37,
+                            "user_id": 1,
+                            "post_id": 5,
+                            "parent_id": 35,
+                            "body": "asdasd",
+                            "created_at": null,
+                            "updated_at": null,
+                            "deleted_at": null,
+                            "user": {
+                                "id": 1,
+                                "name": "admin",
+                                "email": "admin@admin.dev",
+                                "email_verified_at": null,
+                                "created_at": "2020-03-02 08:46:33",
+                                "updated_at": "2020-03-03 03:02:20"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 36,
+                    "user_id": 1,
+                    "post_id": 5,
+                    "parent_id": null,
+                    "body": "asd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": [
+                        {
+                            "id": 38,
+                            "user_id": 1,
+                            "post_id": 5,
+                            "parent_id": 36,
+                            "body": "asdasdasd",
+                            "created_at": null,
+                            "updated_at": null,
+                            "deleted_at": null,
+                            "user": {
+                                "id": 1,
+                                "name": "admin",
+                                "email": "admin@admin.dev",
+                                "email_verified_at": null,
+                                "created_at": "2020-03-02 08:46:33",
+                                "updated_at": "2020-03-03 03:02:20"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "id": 37,
+                    "user_id": 1,
+                    "post_id": 5,
+                    "parent_id": 35,
+                    "body": "asdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 38,
+                    "user_id": 1,
+                    "post_id": 5,
+                    "parent_id": 36,
+                    "body": "asdasdasd",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 39,
+                    "user_id": 1,
+                    "post_id": 5,
+                    "parent_id": null,
+                    "body": "Testing queue with redis..",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                },
+                {
+                    "id": 40,
+                    "user_id": 1,
+                    "post_id": 5,
+                    "parent_id": null,
+                    "body": "testing 2 queue redis",
+                    "created_at": null,
+                    "updated_at": null,
+                    "deleted_at": null,
+                    "replies": []
+                }
+            ]
+        }
+    ]
+}
