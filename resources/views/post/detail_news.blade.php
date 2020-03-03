@@ -50,10 +50,9 @@
                             <div class="form-group">
                                 <input type="submit" class="btn btn-warning" value="Update Netizen" />
                             </div>
-                    @endforeach
-                {{-- </form> --}}
-            </form>
-
+                            @endforeach
+                        {{-- </form> --}}
+                    </form>
                 </div>
             </div>
         </div>
