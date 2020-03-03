@@ -27,9 +27,14 @@
                         </div>
                         @if (session()->get('privilages') == "admin")
                             <div class="form-group">
-                                <input type="submit" class="btn btn-success" />
+                                <input type="submit" class="btn btn-success" /> {{ __('admin [admin]') }}
                             </div>
                             @else
+                                @if(session()->get('privilages') == "user")
+                                    <div class="form-group">
+                                        <input type="submit"  class="btn btn-success" /> {{ __('non-admin [user]') }}
+                                    </div>
+                                @endif
                         @endif
                     </form>
                 </div>
