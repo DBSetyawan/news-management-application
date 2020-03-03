@@ -17,6 +17,15 @@
 - Predis ^1
 - etc.
 
+### Petunjuk (Installasi applikasi)
+
+   1. cd [project]
+   2. composer install
+   3. php artisan migrate
+   4. php artisan passport:install
+   5. (saya running by valet web server nginx) *not php artisan serv (automatically)
+   6. pastikan environment pada .env sesuai dengan development yang anda pakai.
+
 **Redis running** : Testing Comments Queue using redis.
 
 ![news apps](public/img-apps/vKGPbbhUIw.gif)
@@ -29,8 +38,11 @@
       - users (non-admin)
       - admin (admin)
 ---
-- **Refs middleware**
+- **Refs middleware by protected Privilages**
     - blob master at <a href="https://github.com/DBSetyawan/news-management-application/blob/master/app/Http/Middleware/SessionPrivilages.php" target="_blank">`SessionPrivilages`</a>
+- **Kernel**
+    
+    -`'Privilages' => \App\Http\Middleware\SessionPrivilages::class`
 
 ```php
     /**
