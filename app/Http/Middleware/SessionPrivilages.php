@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redis;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Cookie\Middleware\EncryptCookies as Middleware;
 
@@ -18,13 +19,14 @@ class SessionPrivilages extends Middleware
     public function handle($request, Closure $next)
     {
         if (Auth::User()->name == "users") {
-
             session(['privilages' => 'user']);
+            Redis::set('accessable', 'user');
             return $next($request);
 
         } else {
 
             session(['privilages' => 'admin']);
+            Redis::set('accessable', 'admin');
             return $next($request);
             
         }
