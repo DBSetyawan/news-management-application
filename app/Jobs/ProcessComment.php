@@ -5,6 +5,8 @@ namespace App\Jobs;
 use App\Comment;
 use App\Log_news;
 use Illuminate\Bus\Queueable;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Redis;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -35,7 +37,7 @@ class ProcessComment implements ShouldQueue
     {
         $comment = $this->comment;
         $new_log->insert([
-            'username' => session()->get('privilages'),
+            'username' => Redis::get('accessable'),
             'event' => 'Queue Comments',
             'logs_file' => $comment->body
         ]);
