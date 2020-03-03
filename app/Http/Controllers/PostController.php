@@ -9,10 +9,17 @@ use Illuminate\Http\Request;
 use App\Events\EventDeletedPost;
 use App\Events\EventCreateNewPost;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redis;
 use App\Listeners\EventListenerDeletedPost;
    
 class PostController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -21,8 +28,9 @@ class PostController extends Controller
     public function index()
     {
         $post = Post::all();
+        $accessable = Redis::get('accessable');
     
-        return view('post.index', compact('post'));
+        return view('post.index', compact('post','accessable'));
     }
    
     /**
