@@ -1,9 +1,14 @@
+### Access admin
+
 <img src="public/img-apps/projects.png" title="FVCproductions" alt="FVCproductions">
+
+### Access user non-admin
+
+ <img src="public/img-apps/user-access.png" title="FVCproductions" alt="FVCproductions">
 
 
 
 # Repository Application news managements
-
 
 **Package dev-Depedencies**
 
@@ -21,6 +26,7 @@
 
    1. cd [project]
    2. composer install
+   2. npm install
    3. php artisan migrate
    4. php artisan passport:install
    5. (saya running by valet web server nginx) *not php artisan serv (automatically)
