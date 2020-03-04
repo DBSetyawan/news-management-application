@@ -1,8 +1,8 @@
-### Access admin
+> Access admin
 
 <img src="public/img-apps/projects.png" title="FVCproductions" alt="FVCproductions">
 
-### Access user non-admin
+> Access user non-admin
 
  <img src="public/img-apps/user-access.png" title="FVCproductions" alt="FVCproductions">
 
@@ -21,6 +21,12 @@
 - Valet
 - Predis ^1
 - etc.
+
+### Petunjuk (started redis [local])
+
+    1. install redis 3.0.5^
+    2. start redis 3.0.5^ on your local
+    3. running application
 
 ### Petunjuk (Installasi applikasi)
 
@@ -49,6 +55,8 @@
 - **Kernel**
     
     -`'Privilages' => \App\Http\Middleware\SessionPrivilages::class`
+
+> Logic update dan store post with dynamic show/update(file img) 
 
 ```php
     /**
