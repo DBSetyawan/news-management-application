@@ -6,7 +6,9 @@
 
  <img src="public/img-apps/user-access.png" title="FVCproductions" alt="FVCproductions">
 
+# Exception connection redis
 
+ <img src="public/img-apps/exception-redis-server.png" title="FVCproductions" alt="FVCproductions">
 
 # Repository Application news managements
 
@@ -27,6 +29,12 @@
     1. install redis 3.0.5^
     2. start redis 3.0.5^ on your local
     3. running application
+
+### Queue redis to work?
+
+    Sebelum menuju action menu button reply comment / Add Comment
+    pada menu detail post (action edit), pastikan anda menjalankan php artisan queue:work.
+
 
 ### Petunjuk (Installasi applikasi)
 
