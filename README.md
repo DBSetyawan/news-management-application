@@ -12,17 +12,21 @@
 
 # Repository Application news managements
 
-**Package dev-Depedencies**
+**Package Depedencies**
 
-- laravel passport
 - Laravel 6.x
 - Composer
 - php 7.2.*
 - Redis 3.0.5 (stable) version
 - Nginx
 - Valet
-- Predis ^1
 - etc.
+
+**Package dev-Depedencies**
+
+- laravel passport
+- Predis 1^ version
+
 
 ### Petunjuk (started redis [local])
 
